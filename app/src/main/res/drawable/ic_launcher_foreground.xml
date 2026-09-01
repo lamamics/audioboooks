@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Open book -->
+    <path
+        android:fillColor="#F7F0E2"
+        android:pathData="M54,38 C48,32.5 38.5,30.5 30,31.5 L30,72.5 C38.5,71.5 48,73.5 54,79 Z" />
+    <path
+        android:fillColor="#EFE3CC"
+        android:pathData="M54,38 C60,32.5 69.5,30.5 78,31.5 L78,72.5 C69.5,71.5 60,73.5 54,79 Z" />
+    <!-- Spine -->
+    <path
+        android:fillColor="#F7F0E2"
+        android:pathData="M53,38 L55,38 L55,79 L53,79 Z" />
+    <!-- Sound waves above the book -->
+    <path
+        android:fillColor="#F7F0E2"
+        android:pathData="M46,24 a2.2,2.2 0 1,0 0.01,0 Z" />
+    <path
+        android:fillColor="#F7F0E2"
+        android:pathData="M54,20 a2.2,2.2 0 1,0 0.01,0 Z" />
+    <path
+        android:fillColor="#F7F0E2"
+        android:pathData="M62,24 a2.2,2.2 0 1,0 0.01,0 Z" />
+</vector>
