@@ -23,6 +23,10 @@ L'app lit ce dossier et te présente ta bibliothèque.
 - ⭐ Favoris (étoile), notation 1 à 5 étoiles, marquage « Terminé »
   (automatique en fin de livre, ou manuel)
 - 🔊 Lecture en arrière-plan avec notification (écran éteint, autres apps…)
+- 🔍 Recherche dans la bibliothèque (insensible aux accents)
+- 🌍 Page « Trouver des livres » : liens vers 5 sites bénévoles de livres audio
+  gratuits en français (Littérature audio, Audiocité, LibriVox, Bibliboom, Atramenta)
+- ℹ️ Sections « À propos » et « Mentions légales » dans les paramètres
 
 ## Installation sur ton téléphone
 

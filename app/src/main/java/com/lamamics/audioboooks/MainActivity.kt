@@ -22,9 +22,11 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
 import com.lamamics.audioboooks.ui.AudioboooksTheme
+import com.lamamics.audioboooks.ui.LegalScreen
 import com.lamamics.audioboooks.ui.LibraryScreen
 import com.lamamics.audioboooks.ui.PlayerScreen
 import com.lamamics.audioboooks.ui.SettingsScreen
+import com.lamamics.audioboooks.ui.SourcesScreen
 
 class MainActivity : ComponentActivity() {
 
@@ -72,6 +74,8 @@ sealed interface Screen {
     data object Library : Screen
     data class Player(val book: Book) : Screen
     data object Settings : Screen
+    data object Sources : Screen
+    data object Legal : Screen
 }
 
 @Composable
@@ -83,6 +87,7 @@ fun AppRoot(controllerState: MutableState<MediaController?>) {
         is Screen.Library -> LibraryScreen(
             onOpenBook = { book -> screen = Screen.Player(book) },
             onOpenSettings = { screen = Screen.Settings },
+            onOpenSources = { screen = Screen.Sources },
         )
 
         is Screen.Player -> PlayerScreen(
@@ -91,7 +96,14 @@ fun AppRoot(controllerState: MutableState<MediaController?>) {
             onBack = { screen = Screen.Library },
         )
 
-        is Screen.Settings -> SettingsScreen(onBack = { screen = Screen.Library })
+        is Screen.Settings -> SettingsScreen(
+            onBack = { screen = Screen.Library },
+            onOpenLegal = { screen = Screen.Legal },
+        )
+
+        is Screen.Sources -> SourcesScreen(onBack = { screen = Screen.Library })
+
+        is Screen.Legal -> LegalScreen(onBack = { screen = Screen.Settings })
     }
 }
 
