@@ -431,6 +431,7 @@ fun PlayerScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun Chip(selected: Boolean, label: String, onClick: () -> Unit) {
     Surface(

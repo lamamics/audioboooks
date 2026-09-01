@@ -193,6 +193,7 @@ private fun EmptyLibrary(message: String, buttonLabel: String, onClick: () -> Un
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun BookRow(book: Book, onClick: () -> Unit) {
     val context = LocalContext.current
