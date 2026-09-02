@@ -67,7 +67,7 @@ fun LegalScreen(onBack: () -> Unit) {
         ) {
             LegalSection(
                 "Éditeur de l'application",
-                "L'application Audioboooks est éditée par LAMAMICS, " +
+                "L'application Audiobooocs est éditée par LAMAMICS, " +
                     "Société par Actions Simplifiée (SAS).\n\n" +
                     "Siège social : 3 rue de la Basse Houssais, " +
                     "44360 Vigneux-de-Bretagne, France\n" +
@@ -79,7 +79,7 @@ fun LegalScreen(onBack: () -> Unit) {
             )
             LegalSection(
                 "Données personnelles",
-                "Audioboooks est une application 100 % locale : elle ne collecte, " +
+                "Audiobooocs est une application 100 % locale : elle ne collecte, " +
                     "ne stocke ni ne transmet aucune donnée personnelle. Aucun compte " +
                     "n'est requis, aucune statistique d'usage n'est envoyée.\n\n" +
                     "Les préférences (dossier choisi, positions de lecture, notes, " +
@@ -89,7 +89,7 @@ fun LegalScreen(onBack: () -> Unit) {
             )
             LegalSection(
                 "Contenus écoutés",
-                "Les livres audio lus par Audioboooks proviennent exclusivement des " +
+                "Les livres audio lus par Audiobooocs proviennent exclusivement des " +
                     "fichiers présents sur votre appareil. Vous êtes responsable de la " +
                     "licéité des contenus que vous téléchargez. Les sites suggérés dans " +
                     "l'application proposent des œuvres du domaine public lues par des " +
@@ -98,7 +98,7 @@ fun LegalScreen(onBack: () -> Unit) {
             )
             LegalSection(
                 "Propriété intellectuelle",
-                "Le nom Audioboooks, l'application et son identité visuelle sont la " +
+                "Le nom Audiobooocs, l'application et son identité visuelle sont la " +
                     "propriété de LAMAMICS. Le code source de l'application est publié " +
                     "sur GitHub (github.com/lamamics/audioboooks) sous licence MIT."
             )

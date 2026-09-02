@@ -1,4 +1,4 @@
-# Audioboooks — by Lamamics
+# Audiobooocs — by Lamamics
 
 Application Android simple, sobre et intuitive pour écouter et suivre ses audiobooks mp3,
 aux teintes beige clair et rouge bordeaux.
@@ -31,7 +31,7 @@ L'app lit ce dossier et te présente ta bibliothèque.
 ## Installation sur ton téléphone
 
 1. Va dans l'onglet **[Releases](https://github.com/lamamics/audioboooks/releases)** du repo.
-2. Télécharge le fichier `Audioboooks-vX.Y.Z.apk` de la dernière release **depuis ton téléphone**.
+2. Télécharge le fichier `Audiobooocs-vX.Y.Z.apk` de la dernière release **depuis ton téléphone**.
 3. Ouvre le fichier téléchargé et accepte l'installation
    (autorise « l'installation d'applications inconnues » si Android le demande).
 4. Ouvre l'app, choisis ton dossier d'audiobooks, et c'est parti.

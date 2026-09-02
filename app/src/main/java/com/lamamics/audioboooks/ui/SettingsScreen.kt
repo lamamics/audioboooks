@@ -16,6 +16,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -45,6 +46,7 @@ import kotlin.math.roundToInt
 fun SettingsScreen(
     onBack: () -> Unit,
     onOpenLegal: () -> Unit,
+    onOpenFeedback: () -> Unit,
 ) {
     val context = LocalContext.current
     var rewindSeconds by remember { mutableStateOf(Store.rewindSeconds(context)) }
@@ -119,6 +121,49 @@ fun SettingsScreen(
 
             Spacer(Modifier.height(16.dp))
 
+            // Améliorations
+            Card(
+                onClick = onOpenFeedback,
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surface,
+                ),
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Icon(
+                        Icons.Filled.Lightbulb,
+                        contentDescription = null,
+                        modifier = Modifier.size(20.dp),
+                        tint = MaterialTheme.colorScheme.primary,
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            "Améliorations",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.SemiBold,
+                        )
+                        Text(
+                            "Signaler un bug ou proposer une idée",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    Icon(
+                        Icons.AutoMirrored.Filled.ArrowForwardIos,
+                        contentDescription = null,
+                        modifier = Modifier.size(14.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+
+            Spacer(Modifier.height(16.dp))
+
             // À propos
             Card(
                 colors = CardDefaults.cardColors(
@@ -142,7 +187,7 @@ fun SettingsScreen(
                     }
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        "Audioboooks est une application 100 % gratuite et 100 % locale : " +
+                        "Audiobooocs est une application 100 % gratuite et 100 % locale : " +
                             "pas de compte, pas d'inscription, pas de publicité, aucune " +
                             "donnée collectée. Tes livres audio et tes positions de lecture " +
                             "restent sur ton téléphone.\n\n" +

@@ -156,7 +156,7 @@ fun LibraryScreen(
                 TopAppBar(
                     title = {
                         Column {
-                            Text("Audioboooks", fontWeight = FontWeight.Bold)
+                            Text("Audiobooocs", fontWeight = FontWeight.Bold)
                             Text(
                                 "by Lamamics",
                                 style = MaterialTheme.typography.labelSmall,

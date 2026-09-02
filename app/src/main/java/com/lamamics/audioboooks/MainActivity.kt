@@ -22,6 +22,7 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
 import com.lamamics.audioboooks.ui.AudioboooksTheme
+import com.lamamics.audioboooks.ui.FeedbackScreen
 import com.lamamics.audioboooks.ui.LegalScreen
 import com.lamamics.audioboooks.ui.LibraryScreen
 import com.lamamics.audioboooks.ui.PlayerScreen
@@ -76,6 +77,7 @@ sealed interface Screen {
     data object Settings : Screen
     data object Sources : Screen
     data object Legal : Screen
+    data object Feedback : Screen
 }
 
 @Composable
@@ -99,11 +101,14 @@ fun AppRoot(controllerState: MutableState<MediaController?>) {
         is Screen.Settings -> SettingsScreen(
             onBack = { screen = Screen.Library },
             onOpenLegal = { screen = Screen.Legal },
+            onOpenFeedback = { screen = Screen.Feedback },
         )
 
         is Screen.Sources -> SourcesScreen(onBack = { screen = Screen.Library })
 
         is Screen.Legal -> LegalScreen(onBack = { screen = Screen.Settings })
+
+        is Screen.Feedback -> FeedbackScreen(onBack = { screen = Screen.Settings })
     }
 }
 

@@ -47,23 +47,23 @@ jobs:
           ./gradlew --no-daemon assembleRelease
 
       - name: Rename APK
-        run: cp app/build/outputs/apk/release/app-release.apk "Audioboooks-v1.0.${{ github.run_number }}.apk"
+        run: cp app/build/outputs/apk/release/app-release.apk "Audiobooocs-v1.0.${{ github.run_number }}.apk"
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Audioboooks-apk
-          path: Audioboooks-*.apk
+          name: Audiobooocs-apk
+          path: Audiobooocs-*.apk
 
       - name: Create GitHub release
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
-          name: Audioboooks v1.0.${{ github.run_number }}
+          name: Audiobooocs v1.0.${{ github.run_number }}
           body: |
             APK Android signée, installable sur Android 8.0 et plus.
 
             **Installation** : télécharge le fichier `.apk` ci-dessous sur ton téléphone,
             ouvre-le et autorise l'installation depuis des sources inconnues si demandé.
-          files: Audioboooks-*.apk
+          files: Audiobooocs-*.apk

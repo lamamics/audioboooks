@@ -107,7 +107,7 @@ fun SourcesScreen(onBack: () -> Unit) {
                     "Ces sites proposent des livres audio gratuits, lus par des bénévoles " +
                         "(œuvres du domaine public). Télécharge les mp3 d'un livre dans un " +
                         "dossier de ton téléphone — 1 dossier = 1 livre — puis retrouve-le " +
-                        "dans ta bibliothèque Audioboooks.",
+                        "dans ta bibliothèque Audiobooocs.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(bottom = 6.dp),
